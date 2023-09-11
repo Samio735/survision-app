@@ -16,7 +16,7 @@ export default function App() {
         <SafeAreaView>
           <View className="justify-center h-full items-center text-2xl">
             <SignedIn>
-              <Text className="bg-black">Welcome to your app!</Text>
+              <Text className="bg">Welcome to your app!</Text>
             </SignedIn>
             <SignedOut>
               <SignInScreen />
