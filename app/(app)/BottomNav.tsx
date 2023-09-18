@@ -1,16 +1,20 @@
+"use client";
 import Link from "next/link";
 import NavBtn from "./NavBtn";
+import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 function BottomNav() {
+  const pathName = usePathname();
   return (
     <div>
-      <div className="fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t border-gray-200">
-        <div className="grid h-full max-w-lg grid-cols-4 mx-auto gap-0 ont-medium">
+      <div className="fixed bg-backgroundWhite bottom-0 left-0 z-50 w-full h-16  border-gray-200 shadow-2xl">
+        <div className="grid h-full max-w-lg grid-cols-4 mx-auto gap-0 ">
           <Link
-            href="/app/home"
+            href="/home"
             className="flex justify-center h-full w-full  mx-0 items-center"
           >
-            <NavBtn isSelected={false}>
+            <NavBtn isSelected={pathName == "/home"}>
               <svg
                 width="36"
                 height="35"
@@ -34,10 +38,10 @@ function BottomNav() {
             </NavBtn>
           </Link>
           <Link
-            href="/app/surveys"
+            href="/surveys"
             className="flex justify-center h-full  mx-0 items-center"
           >
-            <NavBtn isSelected={false}>
+            <NavBtn isSelected={pathName == "/surveys"}>
               <svg
                 width="36"
                 height="35"
@@ -61,10 +65,10 @@ function BottomNav() {
             </NavBtn>
           </Link>
           <Link
-            href="/app/earnings"
+            href="/earnings"
             className="flex justify-center h-full w-full mx-0 items-center"
           >
-            <NavBtn isSelected={false}>
+            <NavBtn isSelected={pathName == "/earnings"}>
               <svg
                 width="36"
                 height="35"
@@ -100,10 +104,10 @@ function BottomNav() {
             </NavBtn>
           </Link>
           <Link
-            href="/app/account"
+            href="/account"
             className="flex justify-center h-full w-full mx-0 items-center"
           >
-            <NavBtn isSelected={false}>
+            <NavBtn isSelected={pathName == "/account"}>
               <svg
                 width="36"
                 height="35"

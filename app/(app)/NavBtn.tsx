@@ -8,7 +8,7 @@ function NavBtn({
   return (
     <button
       type="button"
-      className={`inline-flex flex-col w-full h-full items-center justify-center px-5 hover:bg-gray-50 group
+      className={`inline-flex flex-col w-full h-full items-center justify-center px-5  group
       ${isSelected ? "stroke-lighOrange" : "stroke-lightGrey"}`}
     >
       {children}
