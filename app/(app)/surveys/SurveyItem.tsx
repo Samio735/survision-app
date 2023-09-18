@@ -1,17 +1,34 @@
 import Link from "next/link";
 import SurveyCard from "./SurveyCard";
 
-export default function SurveyItem() {
+export default function SurveyItem({
+  id,
+  name,
+  availableResponses,
+  allResponses,
+  duration,
+  price,
+}: {
+  id: number;
+  name: string;
+  availableResponses: number;
+  allResponses: number;
+  duration: number;
+  price: number;
+}) {
   return (
-    <Link href={"/survey"} className="w-full">
+    <Link href={`/surveys/${id}`} className="w-full">
       <SurveyCard>
         <div>
-          <p className="text-xl text-black mb-1">Cola Survey</p>
-          <p className="mb-1"> 15/50 responses available</p>
+          <p className="text-xl text-black mb-1">{name}</p>
+          <p className="mb-1">
+            {" "}
+            {availableResponses}/{allResponses} responses available
+          </p>
           <div className="flex gap-8">
-            <p>7min</p>
+            <p>{duration}min</p>
             <div className="flex">
-              <p> 200 DA/ </p>
+              <p> {price} DA/ </p>
               <svg
                 className="mt-1"
                 width="16"
