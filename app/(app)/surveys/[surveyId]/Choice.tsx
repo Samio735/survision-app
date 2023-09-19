@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Choice({
   name,
   number = 0,
