@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function SurveysAvailable() {
   return (
-    <Link href="/earnings" className="w-full">
+    <Link href="/surveys" className="w-full">
       <BrightCard>
         <div className="flex w-full justify-between">
           <h1 className="text-lg ">Surveys available</h1>
