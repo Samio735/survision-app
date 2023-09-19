@@ -1,3 +1,6 @@
+import { Progress } from "@nextui-org/progress";
+import Choice from "./Choice";
+
 export default function page() {
   return (
     <div className="absolute w-screen bg-backgroundWhite pt-4 pb-8 px-4">
@@ -19,7 +22,27 @@ export default function page() {
         </svg>
         <h1 className="text-2xl">Drinks Necesity</h1>
       </div>
-      <div></div>
+      <div className="my-4 mt-8">
+        <Progress
+          aria-label="Loading..."
+          value={60}
+          size="lg"
+          classNames={{
+            indicator: "bg-gradient-to-r from-lighOrange to-darkOrange",
+            track: "bg-[#FFF7F2] border border-darkOrange border-2 h-4 ",
+          }}
+        />
+      </div>
+      <h2 className="text-xl py-2 mb-8">
+        When you hear cola which brand get in mind first ?
+      </h2>
+      <div className="flex flex-col gap-4">
+        <Choice name="Coca cola" />
+        <Choice name="wqf" />
+        <Choice name="wqf" />
+        <Choice name="wqf" />
+        <Choice name="wqf" />
+      </div>
     </div>
   );
 }
