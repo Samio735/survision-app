@@ -8,8 +8,23 @@ export default function page() {
     <>
       {" "}
       <Input
+        type="text"
+        label="First Name"
+        classNames={{ inputWrapper: "bg-backgroundWhite" }}
+      />
+      <Input
+        type="text"
+        label="Family Name"
+        classNames={{ inputWrapper: "bg-backgroundWhite" }}
+      />
+      <Input
         type="email"
-        label="Email "
+        label="Email"
+        classNames={{ inputWrapper: "bg-backgroundWhite" }}
+      />
+      <Input
+        type="number"
+        label="Phone Number"
         classNames={{ inputWrapper: "bg-backgroundWhite" }}
       />
       <Input
@@ -25,7 +40,7 @@ export default function page() {
       </Link>
       <Link href={"/home"} className="w-full">
         <BrightCard>
-          <p className="-my-2">Login</p>
+          <p className="-my-2">Sign up</p>
         </BrightCard>
       </Link>
     </>
