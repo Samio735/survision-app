@@ -7,13 +7,18 @@ function page() {
     <>
       <Card>
         <h1 className="mb-2 text-lightGrey">Name</h1>
-        <p className="text-xl">Samy Rahim</p>
+        <input
+          className="text-xl p-2 appearance-none outline-none placeholder:text-lightGrey focus:placeholder:opacity-0 placeholder:transition-opacity duration-50 ease-in-out bg-backgroundWhite border-2  rounded-lg"
+          placeholder="Samy Rahim"
+        />
       </Card>
 
       <Card>
         <div className="flex justify-between">
           <div>
-            <h1 className="mb-2 text-lightGrey">Status</h1>
+            <h1 className="mb-2 text-lightGrey focus-within::border-yellow-300">
+              Status
+            </h1>
             <p className="text-xl">Not Verified</p>
           </div>
           <div className="flex items-center pe-1">
@@ -39,19 +44,28 @@ function page() {
       </Card>
       <Card>
         <h1 className="mb-2 text-lightGrey">Email</h1>
-        <p className="text-xl">s_rahim@estin.dz</p>
+        <input
+          className="text-xl p-2 appearance-none outline-none placeholder:text-lightGrey focus:placeholder:opacity-0 placeholder:transition-opacity duration-50 ease-in-out bg-backgroundWhite border-2  rounded-lg"
+          placeholder="s_rahim@estin.dz"
+        />{" "}
       </Card>
       <Card>
         <h1 className="mb-2 text-lightGrey">Phone</h1>
-        <p className="text-xl">+213 555 555 555</p>
+        <input
+          className="text-xl p-2 appearance-none outline-none placeholder:text-lightGrey focus:placeholder:opacity-0 placeholder:transition-opacity duration-50 ease-in-out bg-backgroundWhite border-2  rounded-lg"
+          placeholder="+213 555 555 555"
+        />{" "}
       </Card>
       <Card>
         <h1 className="mb-2 text-lightGrey">Address</h1>
-        <p className="text-xl">Boumerdes, Algeria</p>
+        <input
+          className="text-xl p-2 appearance-none outline-none placeholder:text-lightGrey focus:placeholder:opacity-0 placeholder:transition-opacity duration-50 ease-in-out bg-backgroundWhite border-2  rounded-lg"
+          placeholder="Boumerdes, Algeria"
+        />{" "}
       </Card>
       <Link href="/account/edit" className="w-full">
         <BrightCard>
-          <p className="-my-1">Edit</p>
+          <p className="-my-1">Confirm</p>
         </BrightCard>
       </Link>
     </>
