@@ -4,6 +4,7 @@ import { Manrope } from "next/font/google";
 
 import localFont from "next/font/local";
 import { Providers } from "./providers";
+import { ClerkProvider } from "@clerk/nextjs";
 
 // Font files can be colocated inside of `app`
 
@@ -21,10 +22,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="bg-backgroundWhite font-bold">
-      <body className={manrope.className}>
-        {" "}
-        <Providers>{children} </Providers>
-      </body>
+      <ClerkProvider
+        publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+      >
+        <body className={manrope.className}>
+          {" "}
+          <Providers>{children} </Providers>
+        </body>
+      </ClerkProvider>
     </html>
   );
 }
