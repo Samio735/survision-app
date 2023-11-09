@@ -65,7 +65,7 @@ export default function Signin() {
         <div className="h-6"></div>
         <Link href="/sign-up" className="pt-8">
           <p className=" text-md py-2 text-lighOrange underline">
-            Don't have an account? Sign up !
+            {" Don't have an account? Sign up !"}
           </p>
         </Link>
       </button>
