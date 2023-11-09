@@ -2,8 +2,6 @@ import { Survey } from "@/types";
 import Questions from "./Questions";
 import Link from "next/link";
 
-let survey: Survey | undefined = undefined;
-
 export default function page({ params }: { params: { surveyId: string } }) {
   return (
     <div className="absolute w-screen bg-backgroundWhite pt-4 pb-8 px-4">
@@ -25,7 +23,6 @@ export default function page({ params }: { params: { surveyId: string } }) {
             />
           </svg>
         </Link>
-        <h1 className="text-2xl">{survey?.title}</h1>
       </div>
 
       <Questions surveyID={params.surveyId} />
