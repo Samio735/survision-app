@@ -1,11 +1,10 @@
-import { Survey } from "@/types";
 import Questions from "./Questions";
 import Link from "next/link";
 
 export default function page({ params }: { params: { surveyId: string } }) {
   return (
     <div className="absolute w-screen bg-backgroundWhite pt-4 pb-8 px-4">
-      <div className="flex justify-between items-center">
+      {/* <div className="flex justify-between items-center">
         <Link href="/surveys">
           <svg
             width="12"
@@ -25,7 +24,7 @@ export default function page({ params }: { params: { surveyId: string } }) {
         </Link>
       </div>
 
-      <Questions surveyID={params.surveyId} />
+      <Questions surveyID={params.surveyId} /> */}
     </div>
   );
 }
