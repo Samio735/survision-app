@@ -2,9 +2,8 @@
 import { checkLogin, login } from "@/app/functions";
 import BrightCard from "@/components/BrightCard";
 import { Input } from "@nextui-org/react";
-import { set } from "lodash";
 import Link from "next/link";
-import { redirect, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function Signin() {
