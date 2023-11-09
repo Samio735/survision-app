@@ -1,13 +1,20 @@
+"use client";
 import { getSurveys } from "@/app/functions";
 import BrightCard from "@/components/BrightCard";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
-async function SurveysAvailable() {
+function SurveysAvailable() {
   let surveysNum = 0;
-  const data = await getSurveys();
-  if (data) {
-    surveysNum = data.length;
-  }
+  const [surveys, setSurveys] = useState([]);
+  useEffect(() => {
+    getSurveys().then((data) => {
+      if (data) {
+        surveysNum = data.length;
+      }
+      setSurveys(data);
+    });
+  }, []);
 
   return (
     <Link href="/surveys" className="w-full">
