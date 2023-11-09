@@ -1,5 +1,7 @@
 import Signin from "./Signin";
 
-export default function page() {
+function page() {
   return <Signin />;
 }
+
+export default page;
