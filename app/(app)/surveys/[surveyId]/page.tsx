@@ -1,6 +1,17 @@
-import Questions from "./Questions";
-import Link from "next/link";
+// import Questions from "./Questions";
+// import Link from "next/link";
 
+import { BACKEND_URL } from "@/app/constants";
+
+export async function generateStaticParams() {
+  const surveys = await fetch(`${BACKEND_URL}/surveys/`).then((res) =>
+    res.json()
+  );
+
+  return surveys.map((survey: any) => ({
+    slug: survey.slug,
+  }));
+}
 export default function page() {
   return (
     <div className="absolute w-screen bg-backgroundWhite pt-4 pb-8 px-4">
