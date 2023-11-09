@@ -20,7 +20,7 @@ export default function ThisMonth() {
       });
   });
   return (
-    <Card className="w-full p-2">
+    <Card>
       <h1 className="text-xl mb-2 text-lightGrey">This Month</h1>
       <p className="text-5xl mb-4">{earnings} DA</p>
     </Card>
