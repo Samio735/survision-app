@@ -1,7 +1,7 @@
 import Questions from "./Questions";
 import Link from "next/link";
 
-export default function page({ params }: { params: { surveyId: string } }) {
+export default function page() {
   return (
     <div className="absolute w-screen bg-backgroundWhite pt-4 pb-8 px-4">
       {/* <div className="flex justify-between items-center">
