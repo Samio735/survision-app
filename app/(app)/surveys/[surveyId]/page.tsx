@@ -1,11 +1,6 @@
-import { Progress } from "@nextui-org/progress";
-import Choice from "./ChoiceBtn";
-import { useEffect } from "react";
-import { getQuestions, getSurvey } from "@/app/functions";
-import { Question, Survey } from "@/types";
+import { Survey } from "@/types";
 import Questions from "./Questions";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 let survey: Survey | undefined = undefined;
 

@@ -15,6 +15,7 @@ export default function Choice({
   surveyID: string;
   questionID: string | undefined;
   setQuestionNumber: React.Dispatch<React.SetStateAction<number>>;
+  user: any;
 }) {
   return (
     <div

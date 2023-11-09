@@ -17,7 +17,7 @@ import { useRouter } from "next/navigation";
 export default function Questions({ surveyID }: { surveyID: string }) {
   const [questions, setQuestions] = useState(["", ""]);
   const [questionNumber, setQuestionNumber] = useState(0);
-  let question: Question | undefined = questions?.[questionNumber];
+  let question: any = questions?.[questionNumber];
   const [choices, setChoices] = useState<Choice[] | undefined>([]);
   const router = useRouter();
   const [user, setUser] = useState({});
