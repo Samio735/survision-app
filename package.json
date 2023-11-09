@@ -13,6 +13,7 @@
     "@capacitor/cli": "^5.5.1",
     "@capacitor/core": "^5.5.1",
     "@clerk/nextjs": "^4.23.5",
+    "@ducanh2912/next-pwa": "^9.7.2",
     "@nextui-org/react": "^2.1.13",
     "@types/node": "20.6.2",
     "@types/react": "18.2.21",
