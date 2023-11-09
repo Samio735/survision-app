@@ -5,7 +5,11 @@ import { Survey } from "../../../types";
 import { BACKEND_URL } from "../../constants";
 import { checkLogin, getSurveys } from "@/app/functions";
 import { useRouter } from "next/navigation";
-export default function SurveysList() {
+export default function SurveysList({
+  setSurveyId,
+}: {
+  setSurveyId: React.Dispatch<React.SetStateAction<string>>;
+}) {
   const [data, setData] = useState<Survey[] | undefined>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -38,7 +42,11 @@ export default function SurveysList() {
       ) : (
         <>
           {data?.map((survey) => (
-            <SurveyItem key={survey.id} survey={survey} />
+            <SurveyItem
+              key={survey.id}
+              survey={survey}
+              setSurveyId={setSurveyId}
+            />
           ))}
         </>
       )}

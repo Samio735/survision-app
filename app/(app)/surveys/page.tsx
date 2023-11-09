@@ -5,12 +5,13 @@ import SurveyItem from "./SurveyItem";
 import Guide from "./GuideBtn";
 import GuideBtn from "./GuideBtn";
 import SurveysList from "./SurveysList";
+import Answering from "./Answering";
+import Surveys from "./Surveys";
 
 function page() {
   return (
     <>
-      <GuideBtn />
-      <SurveysList />
+      <Surveys />
     </>
   );
 }

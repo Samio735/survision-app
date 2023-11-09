@@ -2,9 +2,21 @@ import Link from "next/link";
 import SurveyCard from "./SurveyCard";
 import { Survey } from "@/types";
 
-export default function SurveyItem({ survey }: { survey: Survey }) {
+export default function SurveyItem({
+  survey,
+  setSurveyId,
+}: {
+  survey: Survey;
+  setSurveyId: React.Dispatch<React.SetStateAction<string>>;
+}) {
   return (
-    <Link href={`/surveys/${survey.id}`} className="w-full">
+    <button
+      className="w-full"
+      onClick={(e) => {
+        e.preventDefault();
+        setSurveyId(survey.id);
+      }}
+    >
       <SurveyCard>
         <div>
           <p className="text-xl text-black mb-1">{survey.title}</p>
@@ -61,6 +73,6 @@ export default function SurveyItem({ survey }: { survey: Survey }) {
           </svg>
         </div>
       </SurveyCard>
-    </Link>
+    </button>
   );
 }
