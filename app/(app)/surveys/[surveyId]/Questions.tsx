@@ -1,7 +1,7 @@
 "use client";
 import { Progress } from "@nextui-org/react";
 import ChoiceBtn from "./ChoiceBtn";
-import { Choice, Question } from "@/types";
+import { Choice } from "@/types";
 import { useEffect, useState } from "react";
 import {
   checkLogin,
@@ -9,7 +9,6 @@ import {
   getChoices,
   getQuestions,
 } from "@/app/functions";
-import Card from "@/components/Card";
 import BrightCard from "@/components/BrightCard";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
