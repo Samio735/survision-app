@@ -57,8 +57,8 @@ function Header() {
             y2="13.5"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#F16E26" />
-            <stop offset="1" stop-color="#EE4A24" />
+            <stop stopColor="#F16E26" />
+            <stop offset="1" stopColor="#EE4A24" />
           </linearGradient>
         </defs>
       </svg>
@@ -72,15 +72,15 @@ function Header() {
         >
           <path
             d="M9.49992 17C9.49992 17 3.49992 13.625 3.49992 8.15C3.4799 7.34954 3.62031 6.55316 3.91286 5.80781C4.20541 5.06245 4.6442 4.38319 5.20336 3.81006C5.76251 3.23692 6.43073 2.7815 7.16864 2.47064C7.90654 2.15977 8.69921 1.99975 9.49992 2C10.3006 1.99975 11.0933 2.15977 11.8312 2.47064C12.5691 2.7815 13.2373 3.23692 13.7965 3.81006C14.3556 4.38319 14.7944 5.06245 15.087 5.80781C15.3795 6.55316 15.5199 7.34954 15.4999 8.15C15.4999 13.625 9.49992 17 9.49992 17Z"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M9.5 10.25C10.7426 10.25 11.75 9.24264 11.75 8C11.75 6.75736 10.7426 5.75 9.5 5.75C8.25736 5.75 7.25 6.75736 7.25 8C7.25 9.24264 8.25736 10.25 9.5 10.25Z"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
         <h2>Algeirs</h2>

@@ -2,7 +2,6 @@ import Image from "next/image";
 import BottomNav from "./BottomNav";
 import Header from "./Header";
 import { NextUIProvider } from "@nextui-org/react";
-import { Providers } from "../providers";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (

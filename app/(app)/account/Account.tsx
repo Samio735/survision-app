@@ -1,20 +1,36 @@
 "use client";
+import { checkLogin } from "@/app/functions";
 import BrightCard from "@/components/BrightCard";
 import Card from "@/components/Card";
 import { UserButton, useUser } from "@clerk/nextjs";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function Account() {
-  const { user, isLoaded } = useUser();
+  const [user, setUser] = useState(undefined);
+  const router = useRouter();
+  useEffect(() => {
+    checkLogin()
+      .then((data) => {
+        if (data.email) {
+          setUser(data);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+        router.push("/sign-in");
+      });
+  });
+
   return (
     <div className="w-full">
-      {!isLoaded && "Loading..."}
       {
         <>
           <Card>
             <h1 className="mb-2 text-lightGrey">Name</h1>
             <p className="text-xl">
-              {user?.firstName} {user?.lastName}
+              {user?.first_name} {user?.last_name}
             </p>
           </Card>
           <Card>
@@ -46,15 +62,15 @@ export default function Account() {
           </Card>
           <Card>
             <h1 className="mb-2 text-lightGrey">Email</h1>
-            <p className="text-xl">
-              {user?.emailAddresses.at(0)?.emailAddress}
-            </p>
+            <p className="text-xl">{user?.email}</p>
           </Card>
-          <BrightCard>
-            <div className="w-full flex justify-between">
-              <p> Edit </p> <UserButton afterSignOutUrl="/"></UserButton>
-            </div>
-          </BrightCard>
+          <Link href="/sign-in">
+            <BrightCard>
+              <div className="w-full flex justify-between">
+                <p> Logout </p>
+              </div>
+            </BrightCard>
+          </Link>
         </>
       }
     </div>

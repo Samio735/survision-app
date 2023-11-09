@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@capacitor/android": "^5.5.1",
+    "@capacitor/cli": "^5.5.1",
+    "@capacitor/core": "^5.5.1",
     "@clerk/nextjs": "^4.23.5",
     "@nextui-org/react": "^2.1.13",
     "@types/node": "20.6.2",
