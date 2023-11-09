@@ -25,7 +25,7 @@ export default function Home() {
     } finally {
       console.log(success);
       if (success == "false") {
-        redirect("/sign-in");
+        redirect("/sign-up");
       }
       if (success == "true") {
         redirect("/home");
