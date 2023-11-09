@@ -1,11 +1,10 @@
 "use client";
 import { checkLogin } from "@/app/functions";
-import BrightCard from "@/components/BrightCard";
-import Link from "next/link";
+import Card from "@/components/Card";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-function Earnings() {
+export default function ThisMonth() {
   const [earnings, setEarnings] = useState(0);
   const router = useRouter();
   useEffect(() => {
@@ -21,13 +20,9 @@ function Earnings() {
       });
   });
   return (
-    <Link href="/earnings" className="w-full ">
-      <BrightCard>
-        <h1 className="text-5xl pt-10 pb-2">{earnings} DA</h1>
-        <h3 className="text-lg pt-4 pb-2">withdraw on 18/11</h3>
-      </BrightCard>
-    </Link>
+    <Card className="w-full p-2">
+      <h1 className="text-xl mb-2 text-lightGrey">This Month</h1>
+      <p className="text-5xl mb-4">{earnings} DA</p>
+    </Card>
   );
 }
-
-export default Earnings;

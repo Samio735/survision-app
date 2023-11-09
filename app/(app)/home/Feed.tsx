@@ -3,7 +3,7 @@ import FeedItem from "@/components/FeedItem";
 
 const data = [
   {
-    title: "New Survey : Drinks Necessity",
+    title: "New Survey : Soda Survey",
     description:
       "watch the video guide to know survey is about, the taget demography and how to handle the questions.",
   },

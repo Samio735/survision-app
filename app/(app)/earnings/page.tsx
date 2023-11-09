@@ -1,14 +1,12 @@
 import BrightCard from "@/components/BrightCard";
 import Card from "@/components/Card";
 import Link from "next/link";
+import ThisMonth from "./ThisMonth";
 
 function page() {
   return (
     <>
-      <Card>
-        <h1 className="text-xl mb-2 text-lightGrey">This Month</h1>
-        <p className="text-5xl mb-4">2,000 DA</p>
-      </Card>
+      <ThisMonth />
       <Card>
         <h1 className="text-xl mb-2 text-lightGrey">All Time</h1>
         <p className="text-2xl mb-1">920,000 DA</p>

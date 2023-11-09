@@ -1,20 +1,22 @@
 "use client";
 import { getSurveys } from "@/app/functions";
 import BrightCard from "@/components/BrightCard";
+import { Survey } from "@/types";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function SurveysAvailable() {
-  let surveysNum = 0;
-  const [surveys, setSurveys] = useState([]);
+  const surveysNumRef = useRef<number>(0);
+  const [surveys, setSurveys] = useState<Survey[]>([]);
   useEffect(() => {
-    getSurveys().then((data) => {
+    getSurveys().then((data: Survey[] | undefined) => {
       if (data) {
-        surveysNum = data.length;
+        surveysNumRef.current = data.length;
       }
-      setSurveys(data);
+      setSurveys(data || []);
     });
   }, []);
+  const surveysNum = surveysNumRef.current;
 
   return (
     <Link href="/surveys" className="w-full">
