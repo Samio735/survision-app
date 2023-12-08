@@ -21,8 +21,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="bg-backgroundWhite font-bold">
-      <body className={manrope.className}> {children}</body>
+    <html lang="en" className="bg-backgroundWhite font-bold ">
+      <body className={manrope.className}>
+        {" "}
+        <div className="max-w-md mx-auto">{children}</div>
+      </body>
     </html>
   );
 }
