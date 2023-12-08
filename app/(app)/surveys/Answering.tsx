@@ -13,7 +13,7 @@ export default function Answering({
     return <></>;
   } else {
     return (
-      <div className="absolute w-screen h-screen bg-backgroundWhite pt-4 pb-8 px-4">
+      <div className="absolute w-screen max-w-md h-screen bg-backgroundWhite pt-4 pb-8 px-4">
         <div className="flex justify-between items-center">
           <Link href="/surveys">
             <svg
